@@ -56,7 +56,7 @@ export default function Home() {
 
       <section className="schedule section" id="schedule">
         <div className="section-heading">
-          <p className="section-number">01 / Schedule</p>
+          <p className="section-number">Schedule</p>
           <h2>Upcoming talks</h2>
           <p>Talk details and reading links will be added as they are confirmed.</p>
         </div>
