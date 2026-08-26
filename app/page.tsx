@@ -19,8 +19,6 @@ export default function Home() {
         </a>
         <nav aria-label="Main navigation">
           <a href="#schedule">Schedule</a>
-          <a href="#about">About</a>
-          <a href="#attend">Attend</a>
         </nav>
       </header>
 
@@ -88,61 +86,6 @@ export default function Home() {
               <span className="materials" role="cell">{talk.link || '—'}</span>
             </div>
           ))}
-        </div>
-      </section>
-
-      <section className="about section" id="about">
-        <div className="section-heading">
-          <p className="section-number">02 / About</p>
-          <h2>Two campuses.<br />One conversation.</h2>
-        </div>
-        <div className="about-grid">
-          <article>
-            <span className="article-index">A</span>
-            <h3>The seminar</h3>
-            <p>
-              The Purdue–University of Michigan Quantum Algorithms Seminar is a
-              shared space for researchers and students to discuss current work,
-              foundational results, and emerging directions in quantum computation.
-            </p>
-          </article>
-          <article>
-            <span className="article-index">B</span>
-            <h3>The format</h3>
-            <p>
-              Talks take place online and are open to both university communities.
-              The usual cadence, presentation length, and discussion format are TBD.
-            </p>
-          </article>
-          <article>
-            <span className="article-index">C</span>
-            <h3>The audience</h3>
-            <p>
-              Faculty, postdoctoral researchers, graduate students, and interested
-              guests are welcome. Background expectations will be noted with each talk.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section className="attend section" id="attend">
-        <div>
-          <p className="section-number">03 / Attend</p>
-          <h2>Join the seminar online.</h2>
-        </div>
-        <div className="attend-details">
-          <div>
-            <span>Meeting day &amp; time</span>
-            <strong>TBD</strong>
-          </div>
-          <div>
-            <span>Online meeting link</span>
-            <strong>TBD</strong>
-          </div>
-          <div>
-            <span>Contact</span>
-            <strong>TBD</strong>
-          </div>
         </div>
       </section>
 
