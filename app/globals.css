@@ -211,9 +211,6 @@ dd { font-weight: 700; margin: 0; }
 }
 
 .section-heading {
-  display: grid;
-  gap: 30px;
-  grid-template-columns: minmax(0, 1fr) auto;
   margin-bottom: 80px;
 }
 
@@ -226,11 +223,6 @@ dd { font-weight: 700; margin: 0; }
   margin: 0;
 }
 
-.section-heading > p:last-child {
-  font-size: 1rem;
-  margin: 8px 0 0;
-  white-space: nowrap;
-}
 .schedule-list { border-top: 2px solid var(--ink); }
 
 .schedule-row {
@@ -285,8 +277,6 @@ footer p { margin: 0; }
 @media (max-width: 900px) {
   .hero { gap: 64px; grid-template-columns: 1fr; }
   .hero-copy { padding-right: 0; }
-  .section-heading { grid-template-columns: 1fr; gap: 18px; }
-  .section-heading > p:last-child { margin-top: 0; white-space: normal; }
 }
 
 @media (max-width: 640px) {

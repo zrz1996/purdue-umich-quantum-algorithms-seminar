@@ -59,7 +59,6 @@ export default function Home() {
       <section className="schedule section" id="schedule">
         <div className="section-heading">
           <h2>Upcoming talks</h2>
-          <p>Talk titles and additional details will be added as they are confirmed.</p>
         </div>
 
         <div className="schedule-list" role="table" aria-label="Upcoming seminar talks">
