@@ -23,49 +23,52 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <figure className="hero-panel hero-left">
-          <img
-            className="split-art"
-            src="og.png"
-            width="1536"
-            height="1024"
-            alt="Purdue–UMich Quantum Algorithms Seminar"
-          />
-        </figure>
-
-        <div className="hero-panel hero-right">
-          <img
-            className="split-art"
-            src="og.png"
-            width="1536"
-            height="1024"
-            alt=""
-            aria-hidden="true"
-          />
-          <aside className="next-talk" aria-labelledby="next-talk-heading">
-            <div className="next-talk-content">
-              <div className="card-label">
-                <span className="pulse" aria-hidden="true" /> Next seminar
-              </div>
-              <p className="talk-date">TBD</p>
-              <h2 id="next-talk-heading">Talk title to be announced</h2>
-              <dl>
-                <div>
-                  <dt>Speaker</dt>
-                  <dd>TBD</dd>
-                </div>
-                <div>
-                  <dt>Time</dt>
-                  <dd>TBD</dd>
-                </div>
-                <div>
-                  <dt>Venue</dt>
-                  <dd>Online · link TBD</dd>
-                </div>
-              </dl>
-            </div>
-          </aside>
+        <div className="hero-copy">
+          <p className="eyebrow">
+            Purdue University <span>×</span> University of Michigan
+          </p>
+          <h1>Quantum<br />Algorithms<br />Seminar</h1>
+          <p className="hero-intro">
+            A joint online forum for new ideas in quantum algorithms, complexity,
+            and computation—bringing together researchers from Purdue and Michigan.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#schedule">
+              View schedule <span aria-hidden="true">↓</span>
+            </a>
+          </div>
         </div>
+
+        <aside className="next-talk" aria-labelledby="next-talk-heading">
+          <div className="orbit-field" aria-hidden="true">
+            <span className="orbit orbit-one" />
+            <span className="orbit orbit-two" />
+            <span className="particle particle-one" />
+            <span className="particle particle-two" />
+            <span className="particle particle-three" />
+          </div>
+          <div className="next-talk-content">
+            <div className="card-label">
+              <span className="pulse" aria-hidden="true" /> Next seminar
+            </div>
+            <p className="talk-date">TBD</p>
+            <h2 id="next-talk-heading">Talk title to be announced</h2>
+            <dl>
+              <div>
+                <dt>Speaker</dt>
+                <dd>TBD</dd>
+              </div>
+              <div>
+                <dt>Time</dt>
+                <dd>TBD</dd>
+              </div>
+              <div>
+                <dt>Venue</dt>
+                <dd>Online · link TBD</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
       </section>
 
       <section className="schedule section" id="schedule">
