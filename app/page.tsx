@@ -20,6 +20,12 @@ export default function Home() {
             A joint online forum for new ideas in quantum algorithms, complexity,
             and computation—bringing together researchers from Purdue and Michigan.
           </p>
+          <p className="organizers">
+            <span>Organizers</span>
+            <a href="https://sites.google.com/umich.edu/zhiyan-ding" target="_blank" rel="noreferrer">Zhiyan Ding</a>
+            <a href="https://dongylaq.github.io/" target="_blank" rel="noreferrer">Yulong Dong</a>
+            <a href="https://ruizhezhang.com/" target="_blank" rel="noreferrer">Ruizhe Zhang</a>
+          </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#schedule">
               View schedule <span aria-hidden="true">↓</span>
@@ -28,15 +34,8 @@ export default function Home() {
         </div>
 
         <aside className="next-talk" aria-labelledby="next-talk-heading">
-          <div className="quantum-circuit" aria-hidden="true">
-            <span className="circuit-line circuit-line-one" />
-            <span className="circuit-line circuit-line-two" />
-            <span className="circuit-line circuit-line-three" />
-            <span className="circuit-gate gate-h">H</span>
-            <span className="circuit-gate gate-r">R</span>
-            <span className="control-dot" />
-            <span className="control-wire" />
-            <span className="target-gate">+</span>
+          <div className="next-visual" aria-hidden="true">
+            <img src="og.png" width="1536" height="1024" alt="" />
           </div>
           <div className="next-talk-content">
             <div className="card-label">
