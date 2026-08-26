@@ -44,8 +44,8 @@ export default function Home() {
                 <dd>Junaid Aftab</dd>
               </div>
               <div>
-                <dt>September 11, 4:10PM-5:10PM EST</dt>
-                <dd>TBD</dd>
+                <dt>Time</dt>
+                <dd>September 11, 4:10PM-5:10PM EST</dd>
               </div>
               <div>
                 <dt>Venue</dt>
