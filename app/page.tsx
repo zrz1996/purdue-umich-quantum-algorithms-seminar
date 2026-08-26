@@ -16,10 +16,6 @@ export default function Home() {
             <span className="michigan-name">UMICH</span>
           </p>
           <h1>Quantum<br />Algorithms<br />Seminar</h1>
-          <p className="hero-intro">
-            A joint online forum for new ideas in quantum algorithms, complexity,
-            and computation—bringing together researchers from Purdue and Michigan.
-          </p>
           <p className="organizers">
             <span>Organizers</span>
             <a href="https://sites.google.com/umich.edu/zhiyan-ding" target="_blank" rel="noreferrer">Zhiyan Ding</a>
