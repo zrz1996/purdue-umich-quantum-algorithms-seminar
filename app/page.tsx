@@ -1,8 +1,10 @@
+const meetingLink = 'https://umich.zoom.us/j/94303319409';
+
 const talks = [
-  { date: 'September 11', speaker: 'Junaid Aftab', title: 'TBD', link: '' },
-  { date: 'September 18', speaker: 'Hsuan-Cheng Wu', title: 'TBD', link: '' },
-  { date: 'September 25', speaker: 'Lingwei Zhang', title: 'TBD', link: '' },
-  { date: 'October 2', speaker: 'Ke Wang', title: 'TBD', link: '' },
+  { date: 'September 11', speaker: 'Junaid Aftab', title: 'TBD', link: meetingLink },
+  { date: 'September 18', speaker: 'Hsuan-Cheng Wu', title: 'TBD', link: meetingLink },
+  { date: 'September 25', speaker: 'Lingwei Zhang', title: 'TBD', link: meetingLink },
+  { date: 'October 2', speaker: 'Ke Wang', title: 'TBD', link: meetingLink },
 ];
 
 export default function Home() {
@@ -47,7 +49,7 @@ export default function Home() {
               </div>
               <div>
                 <dt>Venue</dt>
-                <dd>Online · link TBD</dd>
+                <dd><a href={meetingLink} target="_blank" rel="noreferrer">Join online ↗</a></dd>
               </div>
             </dl>
           </div>
@@ -58,7 +60,7 @@ export default function Home() {
         <div className="section-heading">
           <p className="section-number">Schedule</p>
           <h2>Upcoming talks</h2>
-          <p>Talk details and reading links will be added as they are confirmed.</p>
+          <p>Talk titles and additional details will be added as they are confirmed.</p>
         </div>
 
         <div className="schedule-list" role="table" aria-label="Upcoming seminar talks">
@@ -66,14 +68,16 @@ export default function Home() {
             <span role="columnheader">Date</span>
             <span role="columnheader">Speaker</span>
             <span role="columnheader">Talk</span>
-            <span role="columnheader">Materials</span>
+            <span role="columnheader">Meeting</span>
           </div>
           {talks.map((talk, index) => (
             <div className="schedule-row" role="row" key={index}>
               <span className="schedule-date" role="cell">{talk.date}</span>
               <span role="cell">{talk.speaker}</span>
               <strong role="cell">{talk.title}</strong>
-              <span className="materials" role="cell">{talk.link || '—'}</span>
+              <span className="materials" role="cell">
+                <a href={talk.link} target="_blank" rel="noreferrer">Join ↗</a>
+              </span>
             </div>
           ))}
         </div>

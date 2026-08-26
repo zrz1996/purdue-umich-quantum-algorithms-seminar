@@ -192,6 +192,17 @@ dl div {
 dt { color: rgba(255, 255, 255, 0.64); }
 dd { font-weight: 700; margin: 0; }
 
+.next-talk dd a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.next-talk dd a:hover,
+.next-talk dd a:focus-visible {
+  border-color: var(--maize);
+  color: var(--maize);
+}
+
 .section {
   border-top: 1px solid var(--line);
   margin: 0 auto;
@@ -249,7 +260,10 @@ dd { font-weight: 700; margin: 0; }
   text-transform: uppercase;
 }
 
-.materials { color: rgba(23, 20, 18, 0.5); }
+.materials { color: rgba(23, 20, 18, 0.6); }
+.materials a { border-bottom: 1px solid currentColor; font-weight: 700; }
+.materials a:hover,
+.materials a:focus-visible { color: var(--blue-light); }
 
 footer {
   background: var(--maize);
@@ -285,8 +299,6 @@ footer p { margin: 0; }
   }
 
   .schedule-row strong { font-size: 1.3rem; }
-  .materials { display: none; }
-
   footer { flex-direction: column; gap: 12px; }
 }
 
