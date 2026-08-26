@@ -25,30 +25,14 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">
-            <span className="purdue-name">Purdue</span>
-            <span className="brand-dash" aria-hidden="true">–</span>
-            <span className="michigan-name">UMich</span>
-          </p>
-          <span className="eyebrow-rule" aria-hidden="true" />
-          <h1>
-            <span>Quantum</span>
-            <span>Algorithms</span>
-            <span>Seminar</span>
-          </h1>
-          <span className="title-rule" aria-hidden="true"><i /></span>
-          <p className="hero-intro">
-            A joint online forum for new ideas in quantum algorithms, complexity,
-            and computation—bringing together researchers from Purdue and Michigan.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#schedule">
-              View schedule <span aria-hidden="true">↓</span>
-            </a>
-            <a className="button button-quiet" href="#attend">How to join</a>
-          </div>
-        </div>
+        <figure className="hero-figure">
+          <img
+            src="og.png"
+            width="1536"
+            height="1024"
+            alt="Purdue–UMich Quantum Algorithms Seminar"
+          />
+        </figure>
 
         <aside className="next-talk" aria-labelledby="next-talk-heading">
           <div className="orbit-field" aria-hidden="true">

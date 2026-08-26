@@ -105,17 +105,30 @@ nav a:hover::after,
 nav a:focus-visible::after { transform: scaleX(1); }
 
 .hero {
+  align-items: stretch;
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(380px, 0.75fr);
+  gap: clamp(18px, 2.4vw, 36px);
+  grid-template-columns: minmax(0, 2fr) minmax(360px, 0.8fr);
   margin: 0 auto;
   max-width: 1500px;
-  min-height: calc(100vh - 82px);
-  padding: clamp(70px, 9vw, 140px) 5vw clamp(80px, 10vw, 150px);
+  padding: clamp(40px, 5vw, 76px) 5vw clamp(70px, 8vw, 120px);
 }
 
-.hero-copy { padding-right: clamp(40px, 7vw, 120px); }
+.hero-figure {
+  background: var(--cream);
+  border: 1px solid rgba(23, 20, 18, 0.12);
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+}
 
-.eyebrow,
+.hero-figure img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .section-number,
 .card-label {
   font-size: 0.74rem;
@@ -125,101 +138,12 @@ nav a:focus-visible::after { transform: scaleX(1); }
   text-transform: uppercase;
 }
 
-.eyebrow {
-  align-items: baseline;
-  display: flex;
-  font-family: 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(1.45rem, 2.1vw, 2.25rem);
-  font-weight: 900;
-  gap: 0.18em;
-  letter-spacing: 0.12em;
-  line-height: 1;
-  margin-bottom: 14px;
-}
-
-.eyebrow span { display: inline-block; margin: 0; }
-.purdue-name { color: #977329; }
-.brand-dash { color: var(--blue); letter-spacing: 0; }
-.michigan-name { color: #e8ae00; }
-
-.eyebrow-rule {
-  background: #a98b4d;
-  display: block;
-  height: 2px;
-  margin-bottom: clamp(24px, 3vw, 42px);
-  width: min(66%, 440px);
-}
-
 h1, h2, h3, p { text-wrap: balance; }
-
-h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', 'Arial Narrow', sans-serif;
-  font-size: clamp(4.35rem, 8vw, 8.35rem);
-  font-stretch: condensed;
-  font-weight: 900;
-  letter-spacing: -0.015em;
-  line-height: 0.82;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-h1 span { display: block; }
-
-.title-rule {
-  background: #a98b4d;
-  display: block;
-  height: 2px;
-  margin-top: clamp(28px, 3.5vw, 48px);
-  position: relative;
-  width: min(88%, 610px);
-}
-
-.title-rule i {
-  background: #a98b4d;
-  border-radius: 50%;
-  height: 12px;
-  position: absolute;
-  right: -1px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 12px;
-}
-
-.hero-intro {
-  font-size: clamp(1rem, 1.35vw, 1.25rem);
-  margin: clamp(32px, 4vw, 52px) 0 38px;
-  max-width: 600px;
-}
-
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-
-.button {
-  align-items: center;
-  border: 1px solid var(--ink);
-  display: inline-flex;
-  font-size: 0.77rem;
-  font-weight: 800;
-  gap: 22px;
-  justify-content: center;
-  letter-spacing: 0.08em;
-  min-height: 48px;
-  padding: 0 22px;
-  text-transform: uppercase;
-  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
-}
-
-.button:hover,
-.button:focus-visible { transform: translateY(-2px); }
-.button-primary { background: var(--ink); color: var(--cream); }
-.button-primary:hover,
-.button-primary:focus-visible { background: var(--blue); }
-.button-quiet:hover,
-.button-quiet:focus-visible { background: var(--cream); }
 
 .next-talk {
   background: var(--blue);
   color: white;
-  min-height: 620px;
+  min-height: 0;
   overflow: hidden;
   position: relative;
 }
@@ -437,9 +361,8 @@ footer {
 
 footer p { margin: 0; }
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   .hero { gap: 64px; grid-template-columns: 1fr; }
-  .hero-copy { padding-right: 0; }
   .next-talk { min-height: 570px; }
   .section-heading { grid-template-columns: 1fr; gap: 18px; }
   .section-heading > p:last-child { margin-top: 0; }
@@ -464,9 +387,7 @@ footer p { margin: 0; }
   .brand-mark { transform: scale(0.8); transform-origin: left center; width: 38px; }
   nav { gap: 14px; }
   nav a:nth-child(2) { display: none; }
-  .hero { min-height: 0; padding-top: 62px; }
-  h1 { font-size: clamp(3.55rem, 17vw, 5.5rem); }
-  .hero-intro { margin-top: 42px; }
+  .hero { min-height: 0; padding-top: 32px; }
   .next-talk { min-height: 520px; }
   .orbit-field { height: 40%; }
   .schedule-head { display: none; }
