@@ -1,8 +1,8 @@
 const talks = [
-  { date: 'TBD', speaker: 'TBD', title: 'TBD', link: '' },
-  { date: 'TBD', speaker: 'TBD', title: 'TBD', link: '' },
-  { date: 'TBD', speaker: 'TBD', title: 'TBD', link: '' },
-  { date: 'TBD', speaker: 'TBD', title: 'TBD', link: '' },
+  { date: 'September 11', speaker: 'Junaid Aftab', title: 'TBD', link: '' },
+  { date: 'September 18', speaker: 'Hsuan-Cheng Wu', title: 'TBD', link: '' },
+  { date: 'September 25', speaker: 'Lingwei Zhang', title: 'TBD', link: '' },
+  { date: 'October 2', speaker: 'Ke Wang', title: 'TBD', link: '' },
 ];
 
 export default function Home() {
@@ -34,12 +34,12 @@ export default function Home() {
             <div className="card-label">
               <span className="pulse" aria-hidden="true" /> Next seminar
             </div>
-            <p className="talk-date">TBD</p>
+            <p className="talk-date">September 11</p>
             <h2 id="next-talk-heading">Talk title to be announced</h2>
             <dl>
               <div>
                 <dt>Speaker</dt>
-                <dd>TBD</dd>
+                <dd>Junaid Aftab</dd>
               </div>
               <div>
                 <dt>Time</dt>
