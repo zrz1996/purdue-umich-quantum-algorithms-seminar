@@ -143,9 +143,9 @@ h1 {
 .button-primary:focus-visible { background: var(--blue); }
 
 .next-talk {
+  align-self: center;
   background: var(--blue);
   color: white;
-  min-height: 440px;
   overflow: hidden;
   position: relative;
 }
@@ -163,7 +163,7 @@ h1 {
 .next-talk::after { background: var(--maize); bottom: 0; }
 
 .next-talk-content {
-  padding: 48px clamp(28px, 3.5vw, 48px) 42px;
+  padding: 42px clamp(28px, 3.5vw, 48px) 36px;
   width: 100%;
 }
 
@@ -286,7 +286,6 @@ footer p { margin: 0; }
   h1 { font-size: clamp(3.25rem, 15.5vw, 5rem); }
   .hero-intro { margin-top: 42px; }
   .organizers { align-items: flex-start; flex-direction: column; gap: 7px; }
-  .next-talk { min-height: 420px; }
   .schedule-head { display: none; }
 
   .schedule-row {
