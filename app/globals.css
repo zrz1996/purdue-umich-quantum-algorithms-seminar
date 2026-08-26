@@ -5,6 +5,7 @@
   --paper: #f5f0e6;
   --cream: #fffaf0;
   --gold: #cf9b2c;
+  --purdue-gold: #cfb991;
   --maize: #ffcb05;
   --blue: #00274c;
   --blue-light: #135b91;
@@ -144,14 +145,13 @@ h1 {
 .next-talk {
   background: var(--blue);
   color: white;
-  min-height: 540px;
+  min-height: 440px;
   overflow: hidden;
   position: relative;
 }
 
+.next-talk::before,
 .next-talk::after {
-  background: var(--maize);
-  bottom: 0;
   content: '';
   height: 9px;
   left: 0;
@@ -159,34 +159,11 @@ h1 {
   width: 100%;
 }
 
-.next-visual {
-  background: #001f3d;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  height: 208px;
-  overflow: hidden;
-  position: relative;
-}
-
-.next-visual::after {
-  background: linear-gradient(180deg, rgba(0, 39, 76, 0) 45%, rgba(0, 39, 76, 0.5) 100%);
-  content: '';
-  inset: 0;
-  position: absolute;
-  z-index: 1;
-}
-
-.next-visual img {
-  height: auto;
-  max-width: none;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 230%;
-}
+.next-talk::before { background: var(--purdue-gold); top: 0; }
+.next-talk::after { background: var(--maize); bottom: 0; }
 
 .next-talk-content {
-  padding: 30px clamp(28px, 3.5vw, 48px) 38px;
+  padding: 48px clamp(28px, 3.5vw, 48px) 42px;
   width: 100%;
 }
 
@@ -309,8 +286,7 @@ footer p { margin: 0; }
   h1 { font-size: clamp(3.25rem, 15.5vw, 5rem); }
   .hero-intro { margin-top: 42px; }
   .organizers { align-items: flex-start; flex-direction: column; gap: 7px; }
-  .next-talk { min-height: 500px; }
-  .next-visual { height: 180px; }
+  .next-talk { min-height: 420px; }
   .schedule-head { display: none; }
 
   .schedule-row {

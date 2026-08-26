@@ -34,9 +34,6 @@ export default function Home() {
         </div>
 
         <aside className="next-talk" aria-labelledby="next-talk-heading">
-          <div className="next-visual" aria-hidden="true">
-            <img src="og.png" width="1536" height="1024" alt="" />
-          </div>
           <div className="next-talk-content">
             <div className="card-label">
               <span className="pulse" aria-hidden="true" /> Next seminar
