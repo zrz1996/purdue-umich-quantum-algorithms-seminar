@@ -1,10 +1,10 @@
 const meetingLink = 'https://umich.zoom.us/j/94303319409';
 
 const talks = [
-  { date: 'September 11', speaker: 'Junaid Aftab', title: 'TBD', link: meetingLink },
-  { date: 'September 18', speaker: 'Hsuan-Cheng Wu', title: 'TBD', link: meetingLink },
-  { date: 'September 25', speaker: 'Lingwei Zhang', title: 'TBD', link: meetingLink },
-  { date: 'October 2', speaker: 'Ke Wang', title: 'TBD', link: meetingLink },
+  { date: 'September 11', speaker: 'Junaid Aftab', title: 'TBD', materials: '' },
+  { date: 'September 18', speaker: 'Hsuan-Cheng Wu', title: 'TBD', materials: '' },
+  { date: 'September 25', speaker: 'Lingwei Zhang', title: 'TBD', materials: '' },
+  { date: 'October 2', speaker: 'Ke Wang', title: 'TBD', materials: '' },
 ];
 
 export default function Home() {
@@ -68,16 +68,14 @@ export default function Home() {
             <span role="columnheader">Date</span>
             <span role="columnheader">Speaker</span>
             <span role="columnheader">Talk</span>
-            <span role="columnheader">Meeting</span>
+            <span role="columnheader">Materials</span>
           </div>
           {talks.map((talk, index) => (
             <div className="schedule-row" role="row" key={index}>
               <span className="schedule-date" role="cell">{talk.date}</span>
               <span role="cell">{talk.speaker}</span>
               <strong role="cell">{talk.title}</strong>
-              <span className="materials" role="cell">
-                <a href={talk.link} target="_blank" rel="noreferrer">Join ↗</a>
-              </span>
+              <span className="materials" role="cell">{talk.materials || '—'}</span>
             </div>
           ))}
         </div>
