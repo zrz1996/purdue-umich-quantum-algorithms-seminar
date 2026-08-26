@@ -8,24 +8,12 @@ const talks = [
 export default function Home() {
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Seminar home">
-          <span className="brand-mark" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span>PU × UM</span>
-        </a>
-        <nav aria-label="Main navigation">
-          <a href="#schedule">Schedule</a>
-        </nav>
-      </header>
-
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">
-            Purdue University <span>×</span> University of Michigan
+            <span className="purdue-name">Purdue University</span>
+            <span className="university-cross" aria-hidden="true">×</span>
+            <span className="michigan-name">University of Michigan</span>
           </p>
           <h1>Quantum<br />Algorithms<br />Seminar</h1>
           <p className="hero-intro">
@@ -40,13 +28,6 @@ export default function Home() {
         </div>
 
         <aside className="next-talk" aria-labelledby="next-talk-heading">
-          <div className="orbit-field" aria-hidden="true">
-            <span className="orbit orbit-one" />
-            <span className="orbit orbit-two" />
-            <span className="particle particle-one" />
-            <span className="particle particle-two" />
-            <span className="particle particle-three" />
-          </div>
           <div className="next-talk-content">
             <div className="card-label">
               <span className="pulse" aria-hidden="true" /> Next seminar
