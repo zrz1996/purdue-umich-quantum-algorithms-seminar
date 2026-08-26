@@ -41,7 +41,7 @@ export default function Home() {
             <dl>
               <div>
                 <dt>Speaker</dt>
-                <dd>Junaid Aftab</dd>
+                <dd>Junaid Aftab (University of Michigan)</dd>
               </div>
               <div>
                 <dt>Time</dt>
