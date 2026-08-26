@@ -11,9 +11,9 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <p className="eyebrow">
-            <span className="purdue-name">Purdue University</span>
-            <span className="university-cross" aria-hidden="true">×</span>
-            <span className="michigan-name">University of Michigan</span>
+            <span className="purdue-name">PU</span>
+            <span className="university-cross" aria-hidden="true">-</span>
+            <span className="michigan-name">UMICH</span>
           </p>
           <h1>Quantum<br />Algorithms<br />Seminar</h1>
           <p className="hero-intro">
@@ -28,6 +28,16 @@ export default function Home() {
         </div>
 
         <aside className="next-talk" aria-labelledby="next-talk-heading">
+          <div className="quantum-circuit" aria-hidden="true">
+            <span className="circuit-line circuit-line-one" />
+            <span className="circuit-line circuit-line-two" />
+            <span className="circuit-line circuit-line-three" />
+            <span className="circuit-gate gate-h">H</span>
+            <span className="circuit-gate gate-r">R</span>
+            <span className="control-dot" />
+            <span className="control-wire" />
+            <span className="target-gate">+</span>
+          </div>
           <div className="next-talk-content">
             <div className="card-label">
               <span className="pulse" aria-hidden="true" /> Next seminar

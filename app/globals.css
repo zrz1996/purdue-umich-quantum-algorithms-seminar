@@ -28,7 +28,7 @@ main { min-height: 100vh; overflow: hidden; }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(380px, 0.75fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(350px, 0.65fr);
   margin: 0 auto;
   max-width: 1500px;
   min-height: 100vh;
@@ -51,13 +51,13 @@ main { min-height: 100vh; overflow: hidden; }
   border-bottom: 2px solid #a98b4d;
   display: flex;
   font-family: 'Arial Narrow', 'Helvetica Neue Condensed', 'Helvetica Neue', Arial, sans-serif;
-  font-size: clamp(1rem, 1.55vw, 1.55rem);
-  font-weight: 800;
-  gap: 0.32em;
-  letter-spacing: 0.075em;
+  font-size: clamp(1.9rem, 3vw, 3.1rem);
+  font-weight: 700;
+  gap: 0.22em;
+  letter-spacing: 0.1em;
   line-height: 1.1;
   margin: 0 0 clamp(28px, 4vw, 52px);
-  padding-bottom: 16px;
+  padding-bottom: 18px;
   text-transform: uppercase;
   width: fit-content;
 }
@@ -70,12 +70,12 @@ h1, h2, h3, p { text-wrap: balance; }
 
 h1 {
   color: #071522;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', 'Arial Narrow', sans-serif;
-  font-size: clamp(4.3rem, 8vw, 8.35rem);
+  font-family: 'Helvetica Neue', 'Arial Narrow', Arial, sans-serif;
+  font-size: clamp(3.9rem, 7vw, 7.25rem);
   font-stretch: condensed;
-  font-weight: 900;
-  letter-spacing: -0.015em;
-  line-height: 0.82;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.94;
   margin: 0;
   text-transform: uppercase;
 }
@@ -112,11 +112,9 @@ h1 {
 .button-primary:focus-visible { background: var(--blue); }
 
 .next-talk {
-  align-items: center;
   background: var(--blue);
   color: white;
-  display: flex;
-  min-height: 620px;
+  min-height: 540px;
   overflow: hidden;
   position: relative;
 }
@@ -131,8 +129,83 @@ h1 {
   width: 100%;
 }
 
+.quantum-circuit {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  height: 152px;
+  overflow: hidden;
+  position: relative;
+}
+
+.circuit-line {
+  background: rgba(255, 255, 255, 0.32);
+  height: 1px;
+  left: 9%;
+  position: absolute;
+  right: 9%;
+}
+
+.circuit-line-one { top: 34px; }
+.circuit-line-two { top: 76px; }
+.circuit-line-three { top: 118px; }
+
+.circuit-gate {
+  align-items: center;
+  background: var(--blue);
+  border: 1px solid var(--maize);
+  color: var(--maize);
+  display: flex;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.9rem;
+  height: 28px;
+  justify-content: center;
+  position: absolute;
+  width: 28px;
+}
+
+.gate-h { left: 22%; top: 20px; }
+.gate-r { right: 20%; top: 62px; }
+
+.control-dot {
+  background: var(--maize);
+  border-radius: 50%;
+  height: 8px;
+  left: 52%;
+  position: absolute;
+  top: 30px;
+  transform: translateX(-50%);
+  width: 8px;
+}
+
+.control-wire {
+  background: var(--maize);
+  height: 88px;
+  left: 52%;
+  position: absolute;
+  top: 34px;
+  transform: translateX(-50%);
+  width: 1px;
+}
+
+.target-gate {
+  align-items: center;
+  background: var(--blue);
+  border: 1px solid var(--maize);
+  border-radius: 50%;
+  color: var(--maize);
+  display: flex;
+  font-size: 1rem;
+  height: 24px;
+  justify-content: center;
+  left: 52%;
+  line-height: 1;
+  position: absolute;
+  top: 106px;
+  transform: translateX(-50%);
+  width: 24px;
+}
+
 .next-talk-content {
-  padding: clamp(44px, 6vw, 76px) clamp(30px, 4vw, 60px);
+  padding: 30px clamp(28px, 3.5vw, 48px) 38px;
   width: 100%;
 }
 
@@ -150,11 +223,11 @@ h1 {
 
 .next-talk h2 {
   font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2rem, 3vw, 3.1rem);
+  font-size: clamp(1.75rem, 2.4vw, 2.35rem);
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1;
-  margin: 0 0 34px;
+  margin: 0 0 26px;
 }
 
 dl { border-top: 1px solid rgba(255, 255, 255, 0.22); margin: 0; }
@@ -244,17 +317,17 @@ footer p { margin: 0; }
 @media (max-width: 900px) {
   .hero { gap: 64px; grid-template-columns: 1fr; }
   .hero-copy { padding-right: 0; }
-  .next-talk { min-height: 570px; }
+  .next-talk { min-height: 520px; }
   .section-heading { grid-template-columns: 1fr; gap: 18px; }
   .section-heading > p:last-child { margin-top: 0; }
 }
 
 @media (max-width: 640px) {
   .hero { min-height: 0; padding-top: 42px; }
-  .eyebrow { flex-wrap: wrap; font-size: 0.92rem; gap: 0.18em 0.35em; }
-  h1 { font-size: clamp(3.6rem, 18vw, 5.7rem); }
+  .eyebrow { font-size: clamp(1.7rem, 9vw, 2.35rem); }
+  h1 { font-size: clamp(3.25rem, 15.5vw, 5rem); }
   .hero-intro { margin-top: 42px; }
-  .next-talk { min-height: 520px; }
+  .next-talk { min-height: 500px; }
   .schedule-head { display: none; }
 
   .schedule-row {
