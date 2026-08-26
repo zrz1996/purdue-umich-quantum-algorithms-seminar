@@ -58,7 +58,6 @@ export default function Home() {
 
       <section className="schedule section" id="schedule">
         <div className="section-heading">
-          <p className="section-number">Schedule</p>
           <h2>Upcoming talks</h2>
           <p>Talk titles and additional details will be added as they are confirmed.</p>
         </div>
