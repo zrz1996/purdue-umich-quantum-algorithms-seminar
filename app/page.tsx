@@ -1,10 +1,10 @@
 const meetingLink = 'https://umich.zoom.us/j/94303319409';
 
 const talks = [
-  { date: 'September 11', speaker: 'Junaid Aftab', title: 'TBD', materials: '' },
-  { date: 'September 18', speaker: 'Hsuan-Cheng Wu', title: 'TBD', materials: '' },
-  { date: 'September 25', speaker: 'Lingwei Zhang', title: 'TBD', materials: '' },
-  { date: 'October 2', speaker: 'Ke Wang', title: 'TBD', materials: '' },
+  { date: 'September 11', speaker: 'Junaid Aftab (University of Michigan)', title: 'TBD', materials: '' },
+  { date: 'September 18', speaker: 'Hsuan-Cheng Wu (Penn State University)', title: 'TBD', materials: '' },
+  { date: 'September 25', speaker: 'Lingwei Zhang (University of Michigan)', title: 'TBD', materials: '' },
+  { date: 'October 2', speaker: 'Ke Wang (University of Michigan)', title: 'TBD', materials: '' },
 ];
 
 export default function Home() {
@@ -44,7 +44,7 @@ export default function Home() {
                 <dd>Junaid Aftab</dd>
               </div>
               <div>
-                <dt>Time</dt>
+                <dt>September 11, 4:10PM-5:10PM EST</dt>
                 <dd>TBD</dd>
               </div>
               <div>
