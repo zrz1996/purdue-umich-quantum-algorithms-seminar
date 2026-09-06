@@ -1,7 +1,7 @@
 const meetingLink = 'https://umich.zoom.us/j/94303319409';
 
 const talks = [
-  { date: 'September 11', speaker: 'Junaid Aftab (University of Michigan)', title: 'Quantum Simulation via Multi-Product Formulas', materials: 'https://arxiv.org/abs/2606.11475;https://arxiv.org/abs/2403.08922' },
+  { date: 'September 11', speaker: 'Junaid Aftab (University of Michigan)', title: 'Quantum Simulation via Multi-Product Formulas', materials: '' },
   { date: 'September 18', speaker: 'Hsuan-Cheng Wu (Penn State University)', title: 'TBD', materials: '' },
   { date: 'September 25', speaker: 'Lingwei Zhang (University of Michigan)', title: 'TBD', materials: '' },
   { date: 'October 2', speaker: 'Ke Wang (University of Michigan)', title: 'TBD', materials: '' },
