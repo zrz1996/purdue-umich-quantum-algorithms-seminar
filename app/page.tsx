@@ -1,7 +1,7 @@
 const meetingLink = 'https://umich.zoom.us/j/94303319409';
 
 const talks = [
-  { date: 'September 11', speaker: 'Junaid Aftab (University of Michigan)', title: 'TBD', materials: '' },
+  { date: 'September 11', speaker: 'Junaid Aftab (University of Michigan)', title: 'Quantum Simulation via Multi-Product Formulas', materials: 'Abstrace: Quantum simulation is a central task in quantum computing and a key primitive for algorithms involving dynamics, linear systems, and differential equations. I will discuss multi-product formulas, which retain the commutator sensitivity of product formulas while improving the dependence on simulation time and precision. I will then explain how these ideas extend through linear-combination-of-Hamiltonian-simulation methods to non-unitary dynamics and dissipative linear differential equations. I will also briefly discuss related extrapolation techniques for estimating functional quantities of Hermitian matrices in early fault-tolerant quantum settings.' },
   { date: 'September 18', speaker: 'Hsuan-Cheng Wu (Penn State University)', title: 'TBD', materials: '' },
   { date: 'September 25', speaker: 'Lingwei Zhang (University of Michigan)', title: 'TBD', materials: '' },
   { date: 'October 2', speaker: 'Ke Wang (University of Michigan)', title: 'TBD', materials: '' },
