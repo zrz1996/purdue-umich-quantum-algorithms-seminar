@@ -1,153 +1,140 @@
 # Purdue–UMich Quantum Algorithms Seminar
 
-Website for the joint online Quantum Algorithms Seminar organized by Purdue
-University and the University of Michigan.
+A joint online seminar from Purdue University and the University of Michigan
+on quantum algorithms, complexity, and computation. The website includes a
+seminar schedule and a separate page for each talk, with its title, speaker,
+abstract, meeting details, and links to papers or other materials.
 
 Live site:
 [zrz1996.github.io/purdue-umich-quantum-algorithms-seminar](https://zrz1996.github.io/purdue-umich-quantum-algorithms-seminar/)
 
+Select a talk on the homepage to open its details. Each talk has a permanent
+address that can be shared directly. Unconfirmed titles, abstracts, times, and
+materials display an announcement placeholder until they are supplied.
+
 ## Where to make changes
 
-Most routine updates are made in [`app/page.tsx`](app/page.tsx).
+Most routine content updates are made in [`app/data/talks.ts`](app/data/talks.ts).
+Editing a talk there updates both its schedule entry and its individual page.
+The featured “Next seminar” card also reads from this shared data.
 
 | What you want to change | File |
 | --- | --- |
-| Schedule, next seminar, Zoom link, or organizers | `app/page.tsx` |
-| Colors, fonts, spacing, or page layout | `app/globals.css` |
-| Browser title, description, or social-sharing metadata | `app/layout.tsx` |
+| Talk titles, abstracts, dates, speakers, times, or materials | `app/data/talks.ts` |
+| Featured next seminar or shared Zoom link | `app/data/talks.ts` |
+| Website introduction, organizers, or homepage layout | `app/page.tsx` |
+| Layout of every individual talk page | `app/talks/[slug]/page.tsx` |
+| Colors, fonts, or spacing | `app/globals.css` |
+| Default browser title, description, or social-sharing metadata | `app/layout.tsx` |
+| Talk-specific browser and social-sharing metadata | `app/talks/[slug]/page.tsx` |
 | Social-sharing image | `public/og.png` |
 | GitHub Pages configuration after renaming the repository | `next.config.ts` |
+| This GitHub introduction and editing guide | `README.md` |
 
-## Add or edit a scheduled talk
+## Add or edit a talk
 
-Open `app/page.tsx`. Near the top of the file is the `talks` list:
+Open `app/data/talks.ts` and find the `talks` list. Each `{ ... },` entry
+represents one talk. For example (illustrative content):
 
-```tsx
-const talks = [
-  {
-    date: 'September 11',
-    speaker: 'Junaid Aftab',
-    title: 'TBD',
-    materials: '',
-  },
-  // More talks go here.
-];
-```
-
-Each pair of braces represents one schedule row. Edit its four fields:
-
-- `date`: the date displayed in the first column.
-- `speaker`: the speaker's name.
-- `title`: the talk title. Use `'TBD'` until it is confirmed.
-- `materials`: optional text for the Materials column. Leave it as an empty
-  string (`''`) to display an em dash.
-
-For example:
-
-```tsx
+```ts
 {
-  date: 'October 9',
-  speaker: 'Ada Lovelace',
+  slug: '2026-10-09-ada-lovelace',
+  date: 'October 9, 2026',
+  speaker: 'Ada Lovelace (Example University)',
   title: 'A New Quantum Algorithm',
-  materials: 'Slides forthcoming',
+  abstract: `The first paragraph of the speaker's abstract goes here.
+
+The second paragraph goes here.`,
+  time: 'Time to be announced',
+  materials: [
+    { label: 'Slides', url: 'https://example.com/slides.pdf' },
+    { label: 'Paper', url: 'https://example.com/paper.pdf' },
+  ],
 },
 ```
 
-To add a talk, copy an existing entry, paste the copy before the closing `];`,
-and edit its values. Keep a comma after every entry. The talks appear in the
-same order as they are listed in the file, so keep them in chronological order.
+- `slug`: a unique URL identifier using lowercase letters, numbers, and hyphens.
+  Use the date and speaker's name. Keep it unchanged after publishing so shared
+  links continue to work, even when the title changes.
+- `date`: the displayed date, including the year.
+- `speaker`: the speaker's name and affiliation.
+- `title`: the talk title. Use `'TBD'` until it is confirmed.
+- `abstract`: the speaker's abstract. Use backticks for multiple paragraphs and
+  separate paragraphs with a blank line. Leave it as `''` to display
+  “Abstract to be announced.” Abstracts are plain text, not Markdown or HTML.
+  Escape any literal backtick or `${` within a backtick-delimited abstract.
+- `time`: the confirmed meeting time, including its time zone, or
+  `'Time to be announced'`.
+- `materials`: a list of labeled links to papers, slides, or recordings. Use
+  `[]` when none are available. Links appear on both the homepage and talk page.
 
-To remove a talk, delete its complete `{ ... },` entry. For an event that has
-already happened, either remove it or move it below upcoming talks, depending
-on how you want the schedule to appear.
+To add a talk, copy an entry into the `talks` list and edit its values. Keep a
+comma after each entry and list talks in chronological order. There is no need
+to create a page file or manually add a homepage link: both are generated from
+the data when the site builds.
+
+For the example above, the published page would be:
+
+```text
+https://zrz1996.github.io/purdue-umich-quantum-algorithms-seminar/talks/2026-10-09-ada-lovelace/
+```
+
+Keep past entries if their pages should remain accessible; deleting an entry
+also removes its page at the next deployment. If retaining past talks, change
+“Upcoming talks” to “Seminar schedule” in `app/page.tsx`, including the table's
+accessible label, when appropriate.
 
 ## Update the “Next seminar” card
 
-The next-seminar card is also in `app/page.tsx`. It is intentionally maintained
-separately from the schedule, so changing a schedule row does **not**
-automatically change the card.
+Near the bottom of `app/data/talks.ts`, change the slug in this line to the next
+scheduled talk's slug:
 
-Update these parts of the card:
-
-```tsx
-<p className="talk-date">September 11</p>
-<h2 id="next-talk-heading">Talk title to be announced</h2>
-
-<dt>Speaker</dt>
-<dd>Junaid Aftab</dd>
-
-<dt>Time</dt>
-<dd>TBD</dd>
+```ts
+export const nextTalk = talks.find((talk) => talk.slug === '2026-09-11-junaid-aftab');
 ```
 
-When a talk title or time has not been confirmed, leave the corresponding value
-as `TBD` or `Talk title to be announced`.
+The card automatically uses that talk's title, date, speaker, and time, and
+links to its details page. You do not need to copy those details into the
+homepage. The featured talk is selected manually; it does not advance based on
+the current date. If the slug does not match an entry, the card is hidden.
 
-After each seminar, update both:
+## Change the Zoom link or organizers
 
-1. The `talks` list.
-2. The date, title, speaker, and time in the “Next seminar” card.
+Update `meetingLink` in `app/data/talks.ts` to change the online meeting URL on
+the featured card and every talk page:
 
-## Change the Zoom link
-
-The common meeting link appears at the very top of `app/page.tsx`:
-
-```tsx
-const meetingLink = 'https://umich.zoom.us/j/94303319409';
+```ts
+export const meetingLink = 'https://umich.zoom.us/j/94303319409';
 ```
 
-Replace the URL between the quotation marks. The “Join online” link in the next
-seminar card will update automatically.
-
-## Change organizers or homepage links
-
-Find the block with `className="organizers"` in `app/page.tsx`:
-
-```tsx
-<a href="https://example.com" target="_blank" rel="noreferrer">
-  Organizer Name
-</a>
-```
-
-Change `href` to the organizer's homepage and change the text between `<a>` and
-`</a>` to the organizer's name. Copy an entire `<a>...</a>` element to add
-another organizer, or delete one to remove an organizer.
+To edit organizers, find `className="organizers"` in `app/page.tsx`. Change an
+organizer's link text and `href`, or copy an entire `<a>...</a>` element to add
+another organizer. The introduction is the paragraph with
+`className="seminar-introduction"` in the same file.
 
 ## Make a quick change directly on GitHub
 
 For simple content updates, no local setup is required:
 
 1. Open the repository on GitHub.
-2. Open `app/page.tsx`.
+2. Open `app/data/talks.ts` (or another file from the table above).
 3. Click the pencil icon labeled **Edit this file**.
-4. Make the change and review the **Preview** or **Diff** tab.
-5. Click **Commit changes**.
-6. Commit directly to `main`, or create a branch and pull request if the change
-   should be reviewed first.
-7. Open the repository's **Actions** tab and wait for the Pages deployment to
-   finish.
+4. Make your changes and review the diff.
+5. Click **Commit changes**. Commit to `main`, or create a branch and pull
+   request for review before merging into `main`.
+6. Check the repository's **Actions** tab for the Pages deployment.
 
-Once the workflow succeeds, the live site normally updates within a few
-minutes. If the old version remains visible, refresh the page without using the
-browser cache.
+When deployment finishes, check the homepage and the affected talk page on the
+live site. Refresh without the browser cache if an older version is displayed.
 
 ## Preview changes locally
 
-Local preview is useful for checking several edits before publishing. The
-project requires Node.js 22.13 or newer.
-
-For the first local setup:
-
-```bash
-git clone <repository-url>
-cd purdue-umich-quantum-algorithms-seminar
-npm install
-```
-
-Before starting a later editing session, download the newest published changes:
+The project requires Node.js 22.13 or newer. If you downloaded a ZIP, extract it
+and open a terminal in the project folder. If you cloned the repository, open
+that folder. Install the dependencies:
 
 ```bash
-git pull
+npm ci
 ```
 
 Start the local website:
@@ -157,56 +144,59 @@ npm run dev
 ```
 
 Open the local address printed in the terminal, normally
-[http://localhost:3000](http://localhost:3000). Saved changes should appear
-automatically. Stop the local server with `Ctrl+C`.
+[http://localhost:3000](http://localhost:3000). Follow a talk link to preview its
+page. Saved changes should appear automatically. Stop the server with `Ctrl+C`.
+
+If working in a Git clone, run `git pull` before a new editing session to
+download the latest committed changes.
 
 ## Check the production build
 
-Before publishing a larger change, run the same static-site build used by the
-GitHub Pages workflow:
+Before publishing, run:
 
 ```bash
+npm run lint
 npm run build:github
 ```
 
-If the command succeeds, the site is ready to publish. If it fails after a
-content edit, first check for common syntax mistakes in `app/page.tsx`:
+The build exports the homepage and every talk page into `out/`. GitHub Actions
+sets the repository URL prefix automatically. To check that same configuration
+locally on macOS or Linux, use:
 
-- Missing quotation marks around text.
-- A missing comma after a talk entry.
-- An unmatched `{`, `}`, `<`, or `>`.
-- An apostrophe inside a single-quoted value. Use double quotes for that value
-  or escape the apostrophe.
+```bash
+GITHUB_ACTIONS=true npm run build:github
+```
+
+If a content edit causes the build to fail, check `app/data/talks.ts` for missing
+commas, unmatched braces, or quotation marks. Use backticks for multiline
+abstracts and double quotes or escaping for apostrophes inside single-quoted
+text. Each slug must be unique.
 
 ## Publish local changes
 
-The GitHub Pages workflow deploys every push to the `main` branch:
+The GitHub Pages workflow deploys every push to `main`. In a Git clone, review
+your changes and publish them with:
 
 ```bash
 git status
 git diff
-git add app/page.tsx
-git commit -m "Update seminar schedule"
+git add app/data/talks.ts app/page.tsx 'app/talks/[slug]/page.tsx' app/globals.css README.md
+git commit -m "Add individual seminar talk pages"
 git push origin main
 ```
 
-If other files were changed, include them in `git add` as well. After pushing,
-check the repository's **Actions** tab. The workflow named
-**Deploy seminar site to GitHub Pages** should complete successfully.
+For subsequent updates, stage only the files you changed and choose a suitable
+commit message. If you downloaded a ZIP without Git history, use GitHub's file
+editor/upload interface or clone the repository and copy your changed files
+into the clone before committing.
 
-GitHub Pages must use **GitHub Actions** as its deployment source. This setting
-is under **Repository Settings → Pages → Build and deployment → Source**.
+After pushing, check the workflow named **Deploy seminar site to GitHub Pages**
+in the **Actions** tab. GitHub Pages must use **GitHub Actions** as its deployment
+source under **Settings → Pages → Build and deployment → Source**.
 
 ## If the repository name or site address changes
 
-The repository name is used in `next.config.ts`, and the public URL is used in
-`app/layout.tsx`. Update both if the repository is renamed or moved to another
-GitHub account:
-
-1. Change `repositoryName` in `next.config.ts`.
-2. Change `siteUrl` in `app/layout.tsx`.
-3. Run `npm run build:github`.
-4. Commit and push both files.
-
-Failing to update these values can cause broken styles, missing images, or
-incorrect social-sharing links on the published site.
+Update `repositoryName` in `next.config.ts` and `siteUrl` in `app/layout.tsx`.
+Update the live-site links in this README as well. Run the production build,
+then commit and push the changes. These settings keep styles, navigation, and
+social-sharing URLs aligned with the published site address.
