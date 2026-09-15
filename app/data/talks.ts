@@ -63,7 +63,7 @@ export const talks: Talk[] = [
     materials: [],
   },
   {
-    slug: '2026-10-02-ke-wang',
+    slug: '2026-10-16-yongtao-zhan',
     date: 'October 16, 2026',
     speaker: 'Yongtao Zhan (Caltech)',
     title: 'TBD',
@@ -72,7 +72,7 @@ export const talks: Talk[] = [
     materials: [],
   },
   {
-    slug: '2026-10-02-ke-wang',
+    slug: '2026-10-23-jungmo-lee',
     date: 'October 23, 2026',
     speaker: 'Jungmo Lee (University of Michigan)',
     title: 'TBD',
@@ -83,7 +83,7 @@ export const talks: Talk[] = [
 ];
 
 // Change this slug after each seminar to feature the next scheduled talk.
-export const nextTalk = talks.find((talk) => talk.slug === '2026-09-11-junaid-aftab');
+export const nextTalk = talks.find((talk) => talk.slug === '2026-09-18-hsuan-cheng-wu');
 
 export function talkTitle(talk: Talk) {
   return talk.title.trim() && talk.title !== 'TBD'
