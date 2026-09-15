@@ -28,10 +28,13 @@ export const talks: Talk[] = [
     slug: '2026-09-18-hsuan-cheng-wu',
     date: 'September 18, 2026',
     speaker: 'Hsuan-Cheng Wu (Penn State University)',
-    title: 'TBD',
-    abstract: 'TBD',
+    title: 'From nonlinear stochastic differential equations to quantum channels: the Kolmogorov-Lindblad mapping',
+    abstract: 'Nonlinear stochastic differential equations describe dynamics under uncertainty, but their nonlinear coefficients and noise averaging complicate quantum representations. In the talk, we will discuss the Kolmogorov--Lindblad mapping developed by us that encodes their probability laws as the position diagonals of trace-one quantum density
+operators. For each Brownian realisation, a stochastic flow transports the initial ensemble; the square-root Jacobian makes its action on half-densities unitary. Averaging the resulting pure-state projectors gives a Lindblad equation with Hermitian jump operators. Its diagonal reproduces the Fokker--Planck density, while forward and backward intertwining identities
+recover bounded observables and time correlations independently of the initial coherences. A Galerkin approximation obtained by projecting the Stratonovich generators preserves the Lindblad structure. We give a residual-based error estimate and conditional quantum costs that display the dimension dependence of approximation constants, operator
+normalisations, state preparation and readout. Numerical experiments for double-well Langevin dynamics and noisy Lorenz--63 show rapid convergence of selected statistics at fixed dimension. The construction provides an exact bridge from flow-regular nonlinear diffusions to quantum channels; any computational advantage additionally requires controlled approximationand coherent access for the chosen problem family.',
     time: '4:10PM–5:10PM EST',
-    materials: [],
+    materials: [{ label: 'arXiv:2608.09903', url: 'https://arxiv.org/abs/2608.09903' },],
   },
   {
     slug: '2026-09-25-lingwei-zhang',
