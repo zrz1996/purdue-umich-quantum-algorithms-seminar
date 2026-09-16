@@ -58,13 +58,12 @@ export const talks: Talk[] = [
     date: 'October 9, 2026',
     speaker: 'Zhiyan Ding (University of Michigan)',
     title: 'Tutorial on thermal/ground state preparation via Lindblad dynamics',
-    abstract: 'In this talk, I will give a tutorial about constructing Lindblad dynamics for solving thermal state/ground state preparation problems. The talk will start with intuition from both mathematical and physical side. I will introduce the recent development in the last three years. I will mainly focus on introducing the construction of such dynamics and the theory behind the construction. After that, I will briefly introduce how the end-to-end theoretical complexity is proved in this community and provide several references.
-      ',
+    abstract: 'In this talk, I will give a tutorial about constructing Lindblad dynamics for solving thermal state/ground state preparation problems. The talk will start with intuition from both mathematical and physical side. I will introduce the recent development in the last three years. I will mainly focus on introducing the construction of such dynamics and the theory behind the construction. After that, I will briefly introduce how the end-to-end theoretical complexity is proved in this community and provide several references.',
     time: '4:10PM–5:10PM EST',
     materials: [{ label: '[DCL24,PRR]', url: 'https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.033147' },
-                { label: '[DLL24,PRX Quantum], url: 'https://journals.aps.org/prxquantum/pdf/10.1103/PRXQuantum.5.020332' },
+                { label: '[DLL24,PRX Quantum]', url: 'https://journals.aps.org/prxquantum/pdf/10.1103/PRXQuantum.5.020332' },
                 { label: '[DLL25,CMP]', url: 'https://link.springer.com/article/10.1007/s00220-025-05235-3' },
-                { label: '[ZDH+26,PRX], url: 'https://journals.aps.org/prx/abstract/10.1103/wzb3-dbg9' },
+                { label: '[ZDH+26,PRX]', url: 'https://journals.aps.org/prx/abstract/10.1103/wzb3-dbg9' },
                ],
   },
   {
