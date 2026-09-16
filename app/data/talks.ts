@@ -54,7 +54,7 @@ export const talks: Talk[] = [
     ],
   },
   {
-    slug: '2026-10-02-ke-wang',
+    slug: '2026-10-09-zhiyan-ding',
     date: 'October 9, 2026',
     speaker: 'Zhiyan Ding (University of Michigan)',
     title: 'Tutorial on thermal/ground state preparation via Lindblad dynamics',
