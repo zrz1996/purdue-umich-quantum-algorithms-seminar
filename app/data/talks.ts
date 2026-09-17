@@ -76,8 +76,8 @@ export const talks: Talk[] = [
     materials: [],
   },
   {
-    slug: '2026-10-23-haoen-li',
-    date: 'October 23, 2026',
+    slug: '2026-11-11-haoen-li',
+    date: 'Nov 11, 2026',
     speaker: 'Haoen Li (University of California, Berkeley)',
     title: 'TBD',
     abstract: 'TBD',
