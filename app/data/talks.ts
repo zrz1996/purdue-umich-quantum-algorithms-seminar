@@ -77,7 +77,7 @@ export const talks: Talk[] = [
   },
   {
     slug: '2026-10-23-jungmo-lee',
-    date: 'Oct 23, 2026',
+    date: 'October 23, 2026',
     speaker: 'Jungmo Lee (University of Michigan)',
     title: 'TBD',
     abstract: 'TBD',
@@ -86,7 +86,7 @@ export const talks: Talk[] = [
   },
   {
     slug: '2026-11-11-haoen-li',
-    date: 'Nov 11, 2026',
+    date: 'November 11, 2026',
     speaker: 'Haoen Li (University of California, Berkeley)',
     title: 'TBD',
     abstract: 'TBD',
