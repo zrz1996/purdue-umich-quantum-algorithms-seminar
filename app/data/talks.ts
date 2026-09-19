@@ -93,6 +93,15 @@ export const talks: Talk[] = [
     time: '4:10PM–5:10PM EST',
     materials: [],
   },
+    {
+    slug: '2026-12-04-jiaqing-jiang',
+    date: 'December 4, 2026',
+    speaker: 'Jiaqing Jiang (Simons Institute at UC Berkeley)',
+    title: 'TBD',
+    abstract: 'TBD',
+    time: '4:10PM–5:10PM EST',
+    materials: [],
+  },
 ];
 
 // Change this slug after each seminar to feature the next scheduled talk.
