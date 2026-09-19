@@ -84,19 +84,16 @@ also removes its page at the next deployment. If retaining past talks, change
 “Upcoming talks” to “Seminar schedule” in `app/page.tsx`, including the table's
 accessible label, when appropriate.
 
-## Update the “Next seminar” card
+## Automatic “Next seminar” card
 
-Near the bottom of `app/data/talks.ts`, change the slug in this line to the next
-scheduled talk's slug:
+The card selects the first talk whose `date` is today or later in Eastern time
+(`America/New_York`). Today's talk stays featured for the entire day. Keep the
+talks in chronological order and use dates such as `'September 18, 2026'`.
 
-```ts
-export const nextTalk = talks.find((talk) => talk.slug === '2026-09-11-junaid-aftab');
-```
-
-The card automatically uses that talk's title, date, speaker, and time, and
-links to its details page. You do not need to copy those details into the
-homepage. The featured talk is selected manually; it does not advance based on
-the current date. If the slug does not match an entry, the card is hidden.
+Selection runs in the browser after the page loads, checks again every minute,
+and refreshes when the window regains focus. This lets the GitHub Pages site
+advance without rebuilding. Once all scheduled talks have passed, the card is
+hidden. Its title, date, speaker, time, and link still come from `app/data/talks.ts`.
 
 ## Change the Zoom link or organizers
 

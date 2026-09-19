@@ -104,8 +104,14 @@ export const talks: Talk[] = [
   },
 ];
 
-// Change this slug after each seminar to feature the next scheduled talk.
-export const nextTalk = talks.find((talk) => talk.slug === '2026-09-18-hsuan-cheng-wu');
+// Keep today's talk featured until the calendar day ends in Eastern time.
+export function getNextTalk(now = new Date()) {
+  const today = new Date(
+    now.toLocaleDateString('en-US', { timeZone: 'America/New_York' }),
+  );
+
+  return talks.find((talk) => new Date(talk.date) >= today);
+}
 
 export function talkTitle(talk: Talk) {
   return talk.title.trim() && talk.title !== 'TBD'
