@@ -33,15 +33,6 @@ export const talks: Talk[] = [
     time: '4:10PM–5:10PM EST',
     materials: [{ label: 'arXiv:2608.09903', url: 'https://arxiv.org/abs/2608.09903' },],
   },
-  // {
-  //   slug: '2026-09-25-lingwei-zhang',
-  //   date: 'September 25, 2026 (Rescheduled)',
-  //   speaker: 'Lingwei Zhang (University of Michigan)',
-  //   title: 'Improved Error Scaling for Quantum Spectral Estimation with Multiple Initial States',
-  //   abstract: 'Estimating the eigenvalues and multiplicities of quantum Hamiltonians, together with properties of observables within their eigenspaces, is a fundamental task in quantum computation. The QFAMES framework addresses these problems through Gaussian filtering of transition amplitudes between multiple initial states. In this talk, we will introduce an independent time-sampling strategy and examine how it improves the dependence of estimation error and computational cost on the number of initial states. We will present three theoretical results concerning eigenvalue accuracy, exact multiplicity recovery, and observable estimation, highlighting the main ideas behind the error analysis and proofs. Under suitable assumptions and with sufficiently many time samples per initial-state pair, the leading contribution to the total simulation cost for eigenvalue and observable estimation is independent of the number of initial states, up to logarithmic factors. We will conclude with preliminary numerical results illustrating the predicted error scaling.',
-  //   time: '4:10PM–5:10PM EST',
-  //   materials: [{ label: '[DLYZ,PRX Quantum]', url: 'https://journals.aps.org/prxquantum/abstract/10.1103/jch7-734h' },],
-  // },
   {
     slug: '2026-10-02-ke-wang',
     date: 'October 2, 2026',
