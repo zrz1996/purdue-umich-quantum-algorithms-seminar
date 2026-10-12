@@ -64,10 +64,10 @@ export const talks: Talk[] = [
     slug: '2026-10-16-yongtao-zhan',
     date: 'October 16, 2026',
     speaker: 'Yongtao Zhan (Caltech)',
-    title: 'TBD',
-    abstract: 'TBD',
+    title: 'System–Bath Dynamics: Old Ideas and New Insights',
+    abstract: 'System–bath interactions have long played a central role in the study of open quantum systems. In this talk, I will first review the historical development of system–bath dynamics, including the derivation of Davies generators and experimental demonstrations of low-energy state preparation over the past several decades. I will then discuss the limitations of these traditional approaches and highlight recent advances in harnessing system–bath interactions for efficient Gibbs- and ground-state preparation, along with recent experimental efforts to implement such protocols. Time permitting, I will also discuss theoretical developments in understanding system–bath dynamics beyond the Lindblad approximation.',
     time: '4:10PM–5:10PM EST',
-    materials: [],
+    materials: [{ label: '[DZPL,Nature Physics]', url: 'https://www.nature.com/articles/s41567-026-03389-y' }],
   },
   {
     slug: '2026-10-23-jungmo-lee',
