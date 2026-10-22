@@ -73,8 +73,11 @@ export const talks: Talk[] = [
     slug: '2026-10-23-jungmo-lee',
     date: 'October 23, 2026',
     speaker: 'Jungmo Lee (University of Michigan)',
-    title: 'TBD',
-    abstract: 'TBD',
+    title: 'Gradient Estimation in Variational Quantum Algorithms',
+    abstract: 'Gradient-based optimization of variational quantum algorithms requires estimating derivatives of expectation values with respect to variational parameters. While expectation values can be estimated directly from quantum measurements, obtaining their gradients directly is generally more challenging.
+In this talk, I will introduce the parameter-shift rule for gate-based variational quantum algorithms and its extension to continuous-time quantum control through the differentiable analog quantum computing (DAC) framework, which combines parameter-shift techniques with Monte Carlo integration. 
+I will then discuss black-box zeroth-order gradient estimation methods, including finite differences, Gaussian smoothing-based estimators, and simultaneous perturbation stochastic approximation (SPSA). I will compare these approaches in terms of measurement complexity and estimation accuracy. 
+Finally, I will briefly present our ongoing work on variational quantum eigenvalue transformation of unitaries (QETU) for ground-state preparation.',
     time: '4:10PM–5:10PM EST',
     materials: [],
   },
