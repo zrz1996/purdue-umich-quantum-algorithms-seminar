@@ -91,10 +91,12 @@ export const talks: Talk[] = [
     slug: '2026-11-6-lingwei-zhang',
     date: 'November 6, 2026',
     speaker: 'Lingwei Zhang (University of Michigan)',
-    title: 'Improved Error Scaling for Quantum Spectral Estimation with Multiple Initial States',
-    abstract: 'Estimating the eigenvalues and multiplicities of quantum Hamiltonians, together with properties of observables within their eigenspaces, is a fundamental task in quantum computation. The QFAMES framework addresses these problems through Gaussian filtering of transition amplitudes between multiple initial states. In this talk, we will introduce an independent time-sampling strategy and examine how it improves the dependence of estimation error and computational cost on the number of initial states. We will present three theoretical results concerning eigenvalue accuracy, exact multiplicity recovery, and observable estimation, highlighting the main ideas behind the error analysis and proofs. Under suitable assumptions and with sufficiently many time samples per initial-state pair, the leading contribution to the total simulation cost for eigenvalue and observable estimation is independent of the number of initial states, up to logarithmic factors. We will conclude with preliminary numerical results illustrating the predicted error scaling.',
+    title: 'Quantum Spectral Estimation with Multiple Initial States',
+    abstract: 'Multiple initial states provide access to spectral information that a single state cannot reveal, including eigenvalue degeneracies and observable spectra within eigenspaces. In this talk, I will introduce QFAMES, a Gaussian-filtering framework for recovering this information from matrix-valued quantum signals. I will explain how cross amplitudes between initial states encode eigenspace structure and how QFAMES uses this structure to estimate energies, multiplicities, and observables. Then, I will present our recent work on improving its sampling efficiency. By sampling evolution times independently across state pairs, we obtain better error and cost scaling with the number of initial states under suitable assumptions, while retaining Heisenberg scaling for energy estimation.',
     time: '4:10PM–5:10PM EST',
-    materials: [{ label: '[DLYZ,PRX Quantum]', url: 'https://journals.aps.org/prxquantum/abstract/10.1103/jch7-734h' },],
+    materials: [{ label: '[DLYZ,PRX Quantum]', url: 'https://journals.aps.org/prxquantum/abstract/10.1103/jch7-734h' },
+               { label: '[ZD,arXiv/2610.20482]', url: 'https://arxiv.org/abs/2610.20482' }
+               ],
   }, 
   {
     slug: '2026-11-13-haoen-li',
