@@ -102,10 +102,12 @@ export const talks: Talk[] = [
     slug: '2026-11-13-haoen-li',
     date: 'November 13, 2026',
     speaker: 'Haoen Li (University of California, Berkeley)',
-    title: 'TBD',
-    abstract: 'TBD',
+    title: 'Dissipative Phase Decision and Beyond: Toward Utility-Scale Quantum Simulations',
+    abstract: 'Identifying physically meaningful many-body calculations feasible on early fault-tolerant quantum devices remains a central challenge. In this talk, I will discuss how short-time dissipative dynamics can enable quantum phase decision without accurate ground-state preparation, illustrated by frustrated spin systems and topological phases. I will also highlight recent advances in coherent system–bath dynamics, particularly cooling through a single system–bath contact. These results motivate broader utility-scale strategies for achieving physically useful quantum simulations.',
     time: '4:10PM–5:10PM EST',
-    materials: [],
+    materials: [{ label: '[LYL,arXiv/2606.28750]', url: 'https://arxiv.org/abs/2606.28750' },
+               { label: '[YCL,arXiv/2609.40328]', url: 'https://arxiv.org/abs/2609.40328' }
+               ],
   },
   {
     slug: '2026-12-04-jiaqing-jiang',
